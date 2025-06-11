@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Turn"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Left Hand Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Left Hand:"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnLeftFist"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hand_fist_left"
+                android:background="@null"
+                android:contentDescription="Left 0"/>
+
+            <ImageButton
+                android:id="@+id/btnLeftOpen"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hand_open_left"
+                android:background="@null"
+                android:contentDescription="Left 5"
+                android:layout_marginLeft="16dp"/>
+        </LinearLayout>
+
+        <!-- Right Hand Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Right Hand:"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnRightFist"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hand_fist_right"
+                android:background="@null"
+                android:contentDescription="Right 0"/>
+
+            <ImageButton
+                android:id="@+id/btnRightOpen"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/hand_open_right"
+                android:background="@null"
+                android:contentDescription="Right 5"
+                android:layout_marginLeft="16dp"/>
+        </LinearLayout>
+
+        <!-- Guess Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Guess:"
+            android:layout_marginTop="20dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerGuess"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Submit -->
+        <Button
+            android:id="@+id/btnSubmitTurn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Turn"
+            android:layout_marginTop="24dp"/>
+
+    </LinearLayout>
+</ScrollView>

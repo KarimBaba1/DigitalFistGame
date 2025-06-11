@@ -29,10 +29,11 @@ public class MainActivity extends AppCompatActivity {
         btnRecords = findViewById(R.id.btnRecords);
         btnClose = findViewById(R.id.btnClose);
 
-        btnPlay.setOnClickListener( v ->{
-            //TODO: Replace GameActivity later on
-            Intent intent = new Intent(MainActivity.this, GameActivity.class)
+        btnPlay.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, OpponentSelectActivity.class);
+            startActivity(intent);
         });
+
         btnRecords.setOnClickListener( v ->{
             //TODO: Replace RecordsActivity later on
             Intent intent = new Intent(MainActivity.this, RecordsActivity.class)
