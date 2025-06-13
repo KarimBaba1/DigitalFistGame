@@ -1,0 +1,1 @@
+import com.example.digitalfistgame.GameState;   // <-- put this under the other imports

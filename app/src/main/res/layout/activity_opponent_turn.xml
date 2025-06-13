@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- layout: res/layout/activity_your_turn.xml -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+    android:id="@+id/opponent_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -13,36 +12,33 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
-        <!-- round label set programmatically -->
         <TextView
             android:id="@+id/tvRound"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Round 1"
             android:textStyle="bold"
             android:textSize="18sp"
-            android:paddingBottom="4dp" />
+            android:padding="8dp"
+            android:text="Round 1"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Your Turn"
+            android:text="Opponent's Turn"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="16dp"/>
 
-        <!-- ── Left hand ───────────────────────────── -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose Left Hand:"
-            android:layout_marginTop="12dp" />
+            android:text="Choose Your Left Hand:" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:layout_marginBottom="12dp">
 
             <ImageButton
                 android:id="@+id/btnLeftFist"
@@ -50,32 +46,27 @@
                 android:layout_height="100dp"
                 android:src="@drawable/hand_fist_left"
                 android:background="@null"
-                android:contentDescription="Left 0"
                 android:scaleType="fitCenter" />
 
             <ImageButton
                 android:id="@+id/btnLeftOpen"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="16dp"
                 android:src="@drawable/hand_open_left"
                 android:background="@null"
-                android:contentDescription="Left 5"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:layout_marginStart="16dp"/>
         </LinearLayout>
 
-        <!-- ── Right hand ──────────────────────────── -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choose Right Hand:"
-            android:layout_marginTop="12dp" />
+            android:text="Choose Your Right Hand:" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:orientation="horizontal">
 
             <ImageButton
                 android:id="@+id/btnRightFist"
@@ -83,40 +74,23 @@
                 android:layout_height="100dp"
                 android:src="@drawable/hand_fist_right"
                 android:background="@null"
-                android:contentDescription="Right 0"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"/>
 
             <ImageButton
                 android:id="@+id/btnRightOpen"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="16dp"
                 android:src="@drawable/hand_open_right"
                 android:background="@null"
-                android:contentDescription="Right 5"
-                android:scaleType="fitCenter" />
+                android:scaleType="fitCenter"
+                android:layout_marginStart="16dp"/>
         </LinearLayout>
 
-        <!-- ── Guess picker ────────────────────────── -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Guess:"
-            android:layout_marginTop="20dp" />
-
-        <Spinner
-            android:id="@+id/spinnerGuess"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" />
-
-        <!-- ── Submit button ───────────────────────── -->
         <Button
-            android:id="@+id/btnSubmitTurn"
+            android:id="@+id/btnSubmitOpponent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit Turn"
-            android:layout_marginTop="24dp" />
-
+            android:text="Submit"
+            android:layout_marginTop="24dp"/>
     </LinearLayout>
 </ScrollView>
