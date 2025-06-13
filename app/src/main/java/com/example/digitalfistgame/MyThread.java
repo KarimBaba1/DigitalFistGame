@@ -70,10 +70,15 @@ public class MyThread {
                 guess = obj.getInt("guess");
 
             } catch (Exception e) {
-                Log.e("FetchJSON", "Error fetching / parsing", e);
+                Log.e("FetchJSON", "Error type: " + e.getClass().getSimpleName()
+                        + "  msg: " + e.getMessage(), e);
             } finally {
-                if (conn != null) conn.disconnect();
-                done = true;                            // signal completion
+                if (conn != null) {
+                    try { Log.d("FetchJSON", "HTTP code = " + conn.getResponseCode()); }
+                    catch (Exception ignore) {}
+                    conn.disconnect();
+                }
+                done = true;
             }
         }).start();
     }
